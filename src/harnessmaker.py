@@ -1,3 +1,4 @@
+#foked
 # harnessmaker.py -- TSTL core language
 # Core code by Alex Groce (http://www.cs.cmu.edu/~agroce), 2013-2015
 # Additional features by Jervis Pinto, Pooria Azimi, and Pranjal Mittal
@@ -643,7 +644,7 @@ def main():
             if (pAngle in rhs) or (pComma in rhs) or (pPerc in rhs) or (pPercComma in rhs):
                 fc = filter(lambda x:x != c, classDefs[pSub])
                 if fc != []:
-                    dependencies[c].append(fc)
+                    dependencies[c].append(fc)  # actions that has "<pSub>","<pSub,","%pSub%","%pSub," in rhs,add fc(related to psub) to dependencies
                 
     if config.debug:
         print("-------- :code: --------")
